@@ -1,0 +1,255 @@
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* soft white overlay */
+  z-index: -1;
+}
+
+body {
+    background-image: url("images/coffee_bg.jpg"); /* 👈 replace with your actual image file path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* optional: creates a nice parallax effect */
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+}
+
+.box {
+    margin: 5% auto;
+    width: 70%;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    padding: 40px;
+    font-size: 16px;
+    background-color: white;
+    place-self: center;
+    color: hsl(30, 10%, 34%);
+}
+
+.hero {
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: transparent;
+    position: relative;
+}
+
+#welcome {
+    font-size: 32px;
+    color: hsl(30, 10%, 34%);
+    margin: 0;
+
+}
+
+#cafe_name {
+    font-size: 42px;
+    color: hsl(14, 45%, 36%);
+    margin: 10px 0 0;
+}
+
+#cafe_des {
+    font-family: "Satisfy", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: hsl(30, 10%, 34%);
+    margin-top: 15px;
+}
+
+.hero h1,
+.hero h4 {
+  transition: all 0.3s ease-in-out;
+}
+
+.topic {
+    font-family: "Playfair Display", sans-serif;
+}
+
+.about {
+    padding: 20px;
+    margin-top: 25px;
+    background-color: hsl(30, 60%, 92%) ;
+    border-radius: 10px;
+}
+
+.menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.menu h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: hsl(14, 45%, 36%);
+}
+
+.menu-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  display: none; 
+}
+
+.item {
+  flex: 0 0 220px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  scroll-snap-align: start;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.item p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.item span {
+  display: block;
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.reviews {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: hsl(30, 54%, 95%);
+  border-radius: 15px;
+}
+
+.reviews h2 {
+  font-size: 24px;
+  color: hsl(14, 45%, 36%);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-boxes {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.review-boxes::-webkit-scrollbar {
+  height: 6px;
+}
+
+.review-boxes::-webkit-scrollbar-thumb {
+  background-color: hsl(14, 45%, 36%);
+  border-radius: 10px;
+}
+
+.review {
+  flex: 0 0 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: hsl(30, 10%, 34%);
+}
+
+.review h3 {
+  color: hsl(14, 45%, 36%);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.visit {
+  background-color: hsl(30, 54%, 95%);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.visit h2 {
+  font-size: 24px;
+  color: hsl(14, 45%, 36%);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.location iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.location div {
+  background-color: white;
+  color: hsl(30, 10%, 34%);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+}
+
+.location p {
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: hsl(30, 10%, 34%);
+  background-color: hsl(30, 54%, 90%);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: brown;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: lightsalmon;
+}
